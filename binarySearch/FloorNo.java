@@ -1,23 +1,35 @@
 public class FloorNo {
-    public static void main(String[] args){
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int target = 7;
-        int ans = floorOfNo(array, target);
-        System.out.println("Floor index: " + ans);
+    public static void main(String[] args) {
+        int[] sortedArray = {1, 3, 5, 7, 9, 11, 13}; 
+        int target = 8; 
+
+        int result = findFloorOrNext(sortedArray, target);
+        if (result == target) {
+            System.out.println("Target value found: " + result);
+        } else {
+            System.out.println("Smallest number higher than target: " + result);
+        }
     }
-    static int floorOfNo(int[] array, int target){
-        int start = 0;
-        int end = array.length - 1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (target < array[mid]) {
-                end = mid - 1;
-            } else if (target > array[mid]) {
-                start = mid + 1;
+
+    // Binary search to find the floor value or the smallest number higher than the target
+    private static int findFloorOrNext(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+        int floor = -1; // Initialize floor value
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                return target; // Target value found
+            } else if (arr[mid] < target) {
+                left = mid + 1;
             } else {
-                return mid;
+                floor = arr[mid]; // Update floor value
+                right = mid - 1;
             }
         }
-        return start;
+
+        return floor;
     }
 }
