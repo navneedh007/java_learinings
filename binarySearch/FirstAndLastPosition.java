@@ -2,7 +2,7 @@
 public class FirstAndLastPosition {
     public static void main(String[] args) {
 
-        int[] arr = {5, 7, 7, 8, 8, 10};
+        int[] arr = {5, 7, 7, 8, 8, 8};
         int target = 8;
         int[] ans = new FirstAndLastPosition().searchRange(arr, target);
         System.out.println(ans[0] + " " + ans[1]);
@@ -30,7 +30,7 @@ public class FirstAndLastPosition {
                 start = mid + 1;
             } else {
                 ans = mid;
-                if (findStartIndex) {
+                if (findStartIndex==true) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;

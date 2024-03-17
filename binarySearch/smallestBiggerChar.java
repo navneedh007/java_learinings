@@ -1,6 +1,11 @@
 //leet code problem no
 public class smallestBiggerChar {
     public static void main(String[] args) {
+
+        char[] letters = {'c', 'f', 'j'};
+        char target = 'a';
+        char result = new smallestBiggerChar().nextGreatestLetter(letters, target);
+        System.out.println(result);
     }
     public char nextGreatestLetter(char[] letters, char target) {
 
