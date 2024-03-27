@@ -1,4 +1,5 @@
 //1095 Leet code, Find in Mountain Array
+package binarySearchProblems;
 public class FindInMountainArr {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 3, 1};

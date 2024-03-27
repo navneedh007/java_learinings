@@ -1,3 +1,4 @@
+package binarySearchProblems;
 public class CeilingNo {
     public static int findCeiling(int[] arr, int target) {
         int left = 0;

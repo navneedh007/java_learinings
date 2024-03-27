@@ -1,4 +1,4 @@
-//leet code problem no
+package binarySearchProblems;
 public class smallestBiggerChar {
     public static void main(String[] args) {
 

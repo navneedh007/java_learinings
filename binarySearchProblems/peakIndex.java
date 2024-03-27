@@ -1,6 +1,7 @@
 //852 Peek index in a  array leetcode
 //example: [0,1,0] this array, peek index is 1
 //example: [3,2,1,2,3] this array is otherwise known as bitonic array
+package binarySearchProblems;
 public class peakIndex {
     public static void main(String[] args) {
         int[] arr={-1,0,1,2,1,0};
